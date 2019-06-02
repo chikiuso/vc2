@@ -4,8 +4,8 @@ import time
 from speech_tools import *
 
 dataset = 'vcc2018'
-src_speaker = 'VCC2SF3'
-trg_speaker = 'VCC2TM1'
+src_speaker = 'azure'
+trg_speaker = 'chan'
 
 data_dir = os.path.join('datasets', dataset)
 exp_dir = os.path.join('experiments', dataset)
@@ -21,7 +21,7 @@ os.makedirs(exp_B_dir, exist_ok=True)
 sampling_rate = 22050
 num_mcep = 36
 frame_period = 5.0
-n_frames = 128
+n_frames = 128VCC2SF3'
 
 print('Loading Wavs...')
 
