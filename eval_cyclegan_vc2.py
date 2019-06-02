@@ -5,8 +5,8 @@ from models.cyclegan_vc2 import CycleGAN2
 from speech_tools import *
 
 dataset = 'vcc2018'
-src_speaker = 'VCC2SF3'
-trg_speaker = 'VCC2TM1'
+src_speaker = 'azure_val'
+trg_speaker = 'chan_val'
 model_name = 'cyclegan_vc2'
 
 data_dir = os.path.join('datasets', dataset)
