@@ -7,8 +7,8 @@ from speech_tools import load_pickle, sample_train_data
 np.random.seed(300)
 
 dataset = 'vcc2018'
-src_speaker = 'VCC2SF3'
-trg_speaker = 'VCC2TM1'
+src_speaker = 'azure'
+trg_speaker = 'chan'
 model_name = 'cyclegan_vc2_two_step'
 os.makedirs(os.path.join('experiments', dataset, model_name, 'checkpoints'), exist_ok=True)
 log_dir = os.path.join('logs', '{}_{}'.format(dataset, model_name))
@@ -65,7 +65,7 @@ while iteration <= num_iterations:
             print('Iteration: {:07d}, Generator Loss : {:.3f}, Discriminator Loss : {:.3f}'.format(iteration,
                                                                                                    generator_loss,
                                                                                                    discriminator_loss))
-        if iteration % 2500 == 0:
+        if iteration % 10000 == 0:
             print('Checkpointing...')
             model.save(directory=os.path.join('experiments', dataset, model_name, 'checkpoints'),
                        filename='{}_{}.ckpt'.format(model_name, iteration))
