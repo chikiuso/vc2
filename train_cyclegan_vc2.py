@@ -50,7 +50,7 @@ while iteration <= num_iterations:
     n_samples = dataset_A.shape[0]
 
     for i in range(n_samples // mini_batch_size):
-        if iteration > 10000:
+        if iteration > 20000:
             lambda_identity = 0
 
         start = i * mini_batch_size
@@ -65,7 +65,7 @@ while iteration <= num_iterations:
             print('Iteration: {:07d}, Generator Loss : {:.3f}, Discriminator Loss : {:.3f}'.format(iteration,
                                                                                                    generator_loss,
                                                                                                    discriminator_loss))
-        if iteration % 10000 == 0:
+        if iteration % 20000 == 0:
             print('Checkpointing...')
             model.save(directory=os.path.join('experiments', dataset, model_name, 'checkpoints'),
                        filename='{}_{}.ckpt'.format(model_name, iteration))
