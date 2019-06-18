@@ -61,7 +61,7 @@ while iteration <= num_iterations:
                                                          generator_learning_rate=generator_learning_rate,
                                                          discriminator_learning_rate=discriminator_learning_rate)
 
-        if iteration % 10 == 0:
+        if iteration % 100 == 0:
             print('Iteration: {:07d}, Generator Loss : {:.3f}, Discriminator Loss : {:.3f}'.format(iteration,
                                                                                                    generator_loss,
                                                                                                    discriminator_loss))
