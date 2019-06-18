@@ -6,7 +6,7 @@ from speech_tools import *
 
 dataset = 'vcc2018'
 src_speaker = 'azure_val'
-trg_speaker = 'chan_val'
+trg_speaker = 'xi_val'
 model_name = 'cyclegan_vc2'
 
 data_dir = os.path.join('datasets', dataset)
