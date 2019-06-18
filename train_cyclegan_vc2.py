@@ -8,7 +8,7 @@ np.random.seed(300)
 
 dataset = 'vcc2018'
 src_speaker = 'azure'
-trg_speaker = 'chan'
+trg_speaker = 'xi'
 model_name = 'cyclegan_vc2_two_step'
 os.makedirs(os.path.join('experiments', dataset, model_name, 'checkpoints'), exist_ok=True)
 log_dir = os.path.join('logs', '{}_{}'.format(dataset, model_name))
